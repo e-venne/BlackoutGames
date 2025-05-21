@@ -3,11 +3,20 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
+
     <title>Spark</title>
+
+    <!-- Google AdSense Verification -->
+    <meta name="google-adsense-account" content="ca-pub-5895657092030763">
+
     <!-- Font Imports -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+
+    <!-- Favicon -->
+    <link rel="icon" href="R.png" type="image/png" />
+
     <!-- Styles -->
     <style>
         /* General Page Styles */
@@ -17,10 +26,10 @@
             color: rgb(255, 255, 255);
             background-color: rgb(0, 0, 0);
             margin: 0;
-            padding: 0;
+            padding: 0 0 140px 0; /* padding-bottom for ads space */
             background-repeat: no-repeat;
             background-size: cover;
-            overflow: hidden;
+            overflow-x: hidden;
         }
 
         h1 {
@@ -83,6 +92,27 @@
             top: 20px;
             right: 20px;
         }
+
+        /* Ad container at bottom */
+        .ads-container {
+            position: fixed;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 720px; /* Two ads side by side with some gap */
+            display: flex;
+            justify-content: space-between;
+            gap: 10px;
+            z-index: 9999;
+        }
+
+        .ads-container ins.adsbygoogle {
+            display: inline-block !important;
+            width: 350px !important;
+            height: 100px !important;
+            background: transparent;
+        }
+
     </style>
 </head>
 <body>
@@ -107,6 +137,31 @@
     <div class="top-right">
         <a href="links.html"><button class="button">Spark Alt Links</button></a>
     </div>
+
+    <!-- Ads at bottom -->
+    <div class="ads-container">
+        <ins class="adsbygoogle"
+            style="display:inline-block"
+            data-ad-client="ca-pub-5895657092030763"
+            data-ad-slot="1111111111"
+            data-ad-format="horizontal"
+            data-full-width-responsive="false"></ins>
+
+        <ins class="adsbygoogle"
+            style="display:inline-block"
+            data-ad-client="ca-pub-5895657092030763"
+            data-ad-slot="2222222222"
+            data-ad-format="horizontal"
+            data-full-width-responsive="false"></ins>
+    </div>
+
+    <!-- Load AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5895657092030763" crossorigin="anonymous"></script>
+
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+        (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
 
     <!-- Dynamic Title & Favicon -->
     <script>
