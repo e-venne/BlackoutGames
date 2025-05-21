@@ -16,7 +16,7 @@
 </style>
 </head>
 <body>
-    <iframe id="gameIframe" src="https://www.offtiktok.com/"></iframe>
+    <iframe id="gameIframe" src="https://caracal-js.github.io/Incognito/"></iframe>
     <style>
         body {
             background-image: linear-gradient(to left, violet, indigo, blue, green, yellow, orange, red);
