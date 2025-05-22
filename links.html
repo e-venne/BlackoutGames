@@ -1,133 +1,130 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zenithub Alt Links</title>
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
-    <meta name="google-adsense-account" content="ca-pub-5895657092030763">
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5895657092030763"
-     crossorigin="anonymous"></script>
-     
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Zenithub Alt Links</title>
+  <meta name="google-adsense-account" content="ca-pub-5895657092030763" />
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
 
-    <style>
-      @import url("https://themes.googleusercontent.com/fonts/css?kit=qQd6D95egUzVkA2ytt6-zw");
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
 
+  <!-- AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5895657092030763"
+    crossorigin="anonymous"></script>
 
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background-color: #000;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+      padding: 20px;
+      box-sizing: border-box;
+    }
 
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      text-align: center;
+    }
 
-      body {
-        background-color: #000000;
-        font-family: "Arial", sans-serif;
-        color: #ffffff;
-        margin: 0;
-        padding: 0;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
+    .container {
+      max-width: 800px;
+      width: 100%;
+      text-align: center;
+    }
+
+    .link {
+      display: block;
+      background: #111;
+      color: #00ff00;
+      text-decoration: none;
+      padding: 12px 20px;
+      margin: 10px auto;
+      border-radius: 10px;
+      transition: background 0.3s;
+    }
+
+    .link:hover {
+      background: #222;
+    }
+
+    .ad-container {
+      margin: 20px 0;
+      text-align: center;
+    }
+
+    @media (max-width: 600px) {
+      .link {
+        font-size: 16px;
+        padding: 10px;
       }
-
-
-
-
-      .container {
-        max-width: 768px;
-        padding: 20px;
-        text-align: center;
-      }
-
-
-
 
       h1 {
-        font-family: "Poppins", sans-serif;
-        font-size: 50px;
-        margin-bottom: 20px;
-        color: #ffffff;
+        font-size: 2rem;
       }
-
-
-
-
-      p {
-        font-family: "Poppins", sans-serif;
-        font-size: 20px;
-      }
-
-
-
-
-      a {
-        color: #00ff00;
-        text-decoration: none;
-        font-size: 18px;
-      }
-
-
-
-
-      a:hover {
-        text-decoration: underline;
-      }
-
-
-
-
-      .link {
-        margin: 10px 0;
-        display: block;
-      }
-    </style>
-  </head>
-  <body>
-    <div class="container">
-      <h1>Zenithub Alt Links</h1>
-      <div>
-        <a class="link" href="https://blackoutgames.pages.dev">OG Link, Blocked in some places.</a>
-        <a class="link" href="https://hihowareyou.vercel.app/">Hi How Are You</a>
-        <a class="link" href="https://coolsciencegames-psi.vercel.app/">Cool Science Games</a>
-        <a class="link" href="https://supermathgames.vercel.app/">Super Math Games</a>
-        <a class="link" href="https://educationalgizmos.vercel.app/">Educational Gizmos</a>
-        <a class="link" href="https://classroomteams.vercel.app/">Classroom Teams</a>
-        <a class="link" href="https://coolreadinggames.vercel.app/">Cool Reading Games</a>
-        <a class="link" href="https://parasytemathgames.vercel.app/">Parasite Math Games</a>
-        <a class="link" href="https://tangmath2.vercel.app/">Tang Math 2</a>
-        <a class="link" href="https://mathexplainers.vercel.app/">Math Explainers</a>
-        <a class="link" href="https://mathisgreat.netlify.app/">Math Is Great</a>
-        <a class="link" href="https://blackoutgames.netlify.app/">Blackout Games</a>
-        <a class="link" href="https://tangreading.netlify.app/">Tang Reading</a>
-        <a class="link" href="https://dotlyhiyou.github.io/BlackoutGames/">Github Pages Link</a>
-        <a class="link" href="https://github.com/DotLYHiyou/Zenithub">Github Repository Link</a>
-        <a class="link" href="https://discord.gg/U8tT8AazXb">Discord Server Invite Link</a>
-      </div>
-    </div>
-    <script>
-  document.addEventListener("DOMContentLoaded", function() {
-    const favicon = document.querySelector("link[rel='icon']") || document.createElement("link");
-    favicon.rel = "icon";
-    document.head.appendChild(favicon);
-
-    const storedPreset = localStorage.getItem("selectedTabPreset") || "default";
-
-    switch (storedPreset) {
-      case "google":
-        document.title = "Google";
-        favicon.href = "https://www.google.com/favicon.ico";
-        break;
-      case "classroom":
-        document.title = "Google Classroom";
-        favicon.href = "https://classroom.google.com/favicon.ico";
-        break;
-      case "vocabulary":
-        document.title = "Vocabulary.com";
-        favicon.href = "https://www.vocabulary.com/favicon.ico";
-        break;
-      default:
-        document.title = "Games";
-        favicon.href = "favicon.ico";
     }
-  });
-</script>
-  </body>
-</html>
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Zenithub Alt Links</h1>
+
+    <div class="ad-container">
+      <!-- Example Ad Slot (replace with your AdSense unit) -->
+      <ins class="adsbygoogle"
+        style="display:block"
+        data-ad-client="ca-pub-5895657092030763"
+        data-ad-slot="1234567890"
+        data-ad-format="auto"
+        data-full-width-responsive="true"></ins>
+      <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    </div>
+
+    <a class="link" href="https://blackoutgames.pages.dev">OG Link (Blocked in some places)</a>
+    <a class="link" href="https://hihowareyou.vercel.app/">Hi How Are You</a>
+    <a class="link" href="https://coolsciencegames-psi.vercel.app/">Cool Science Games</a>
+    <a class="link" href="https://supermathgames.vercel.app/">Super Math Games</a>
+    <a class="link" href="https://educationalgizmos.vercel.app/">Educational Gizmos</a>
+    <a class="link" href="https://classroomteams.vercel.app/">Classroom Teams</a>
+    <a class="link" href="https://coolreadinggames.vercel.app/">Cool Reading Games</a>
+    <a class="link" href="https://parasytemathgames.vercel.app/">Parasite Math Games</a>
+    <a class="link" href="https://tangmath2.vercel.app/">Tang Math 2</a>
+    <a class="link" href="https://mathexplainers.vercel.app/">Math Explainers</a>
+    <a class="link" href="https://mathisgreat.netlify.app/">Math Is Great</a>
+    <a class="link" href="https://blackoutgames.netlify.app/">Blackout Games</a>
+    <a class="link" href="https://tangreading.netlify.app/">Tang Reading</a>
+    <a class="link" href="https://dotlyhiyou.github.io/BlackoutGames/">GitHub Pages Link</a>
+    <a class="link" href="https://github.com/DotLYHiyou/Zenithub">GitHub Repository</a>
+    <a class="link" href="https://discord.gg/U8tT8AazXb">Discord Server</a>
+  </div>
+
+  <!-- Dynamic Favicon & Title -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const favicon = document.querySelector("link[rel='icon']") || document.createElement("link");
+      favicon.rel = "icon";
+      document.head.appendChild(favicon);
+
+      const preset = localStorage.getItem("selectedTabPreset") || "default";
+
+      switch (preset) {
+        case "google":
+          document.title = "Google";
+          favicon.href = "https://www.google.com/favicon.ico";
+          break;
+        case "classroom":
+          document.title = "Google Classroom";
+          favicon.href = "https://classroom.google.com/favicon.ico";
+          break;
+        case "vocabulary":
+          document.title = "Vocabulary.com";
+          favicon.href = "
