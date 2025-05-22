@@ -1,318 +1,173 @@
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Games</title>
-  <meta name="google-adsense-account" content="ca-pub-5895657092030763">
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5895657092030763"
-     crossorigin="anonymous"></script>
-</head>
-<body>
-  
 
-<style>
-.button {
-    position: relative;
-    font-size: 14px;
-    text-transform: uppercase;
-    text-decoration: none;
-    display: inline-block;
-    border-radius: 10px;
-    transition: all .2s;
-    border: none;
-    font-family: Poppins;
-    font-weight: 425;
-    color: black;
-    background-color: white;
-    padding: 1em 2em;
-    margin: 5px;
-}
-
-.button:hover {
-    transform: translateY(-3px);
-    box-shadow: none; /* Removed the white shadow on hover */
-}
-
-.button:active {
-    transform: translateY(-1px);
-}
-
-.button::after {
-    content: "";
-    display: inline-block;
-    height: 100%;
-    width: 100%;
-    border-radius: 12px;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
-}
-
-.button::after {
-    background-color: #fff;
-}
-
-.button:hover::after {
-    transform: scaleX(1.4) scaleY(1.6);
-    opacity: 0;
-}
-
-
-
-
-  .sample {
-    border-radius: 12px;
-    background-color: white;
-    color: black;
-    text-decoration: none;
-    padding: 10px 20px;
-  
-  }
-  .sample:hover {
-    box-shadow:5px 10px 20px #ffffff;
-  }
-</style>
-<button class="button" onclick="window.location.href='games/fruit.html'">Fruit ninja</button>
-
-<button class="button" onclick="window.location.href='games/smc.html'">Super Mario Construct </button>
-
-<button class="button" onclick="window.location.href='games/metro.html'">Metroid Fusion</button>
-
-<button class="button" onclick="window.location.href='games/celeste.html'">Celeste</button>
-
-<button class="button" onclick="window.location.href='games/slope.html'">Slope</button>
-
-<button class="button" onclick="window.location.href='games/mc.html'" class="btn">Minecraft (1.5.2)</button>
-
-<button class="button" onclick="window.location.href='games/mc2.html'">Minecraft (Classic)</button>
-
-<button class="button" onclick="window.location.href='games/marioboom.html'">Mario Combat</button>
-
-<button class="button" onclick="window.location.href='games/mrmine.html'">MrM1ne</button>
-
-<button class="button" onclick="window.location.href='games/tiktok.html'">Prox1e</button>
-
-<button class="button" onclick="window.location.href='games/mk48.html'">Mk48 NEW!!!</button>
-
-
-
-
-
-
-
-
- <style>
-   
-  img {
-    display: block;
-    margin: auto;
-    width: 35%; /* change this value to adjust the size of the image */
-  }
-</style>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+    rel="stylesheet"
+  />
 
   <style>
     body {
-    color: rgb(0, 255, 255);
-      background-color:black;
-      font-family:Ubuntu;
-      background-size: cover;
-    background-repeat: no-repeat;
-    margin: 0;
-    padding: 0;
+      background-color: black;
+      font-family: 'Poppins', sans-serif;
+      color: white;
+      margin: 0;
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    h1 {
+      color: #f9a825; /* yellow-orange */
+      margin-bottom: 1rem;
+      text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
+    }
+
+    .game-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+      gap: 15px;
+      width: 100%;
+      max-width: 1000px;
+    }
+
+    .button {
+      position: relative;
+      font-size: 14px;
+      text-transform: uppercase;
+      text-decoration: none;
+      display: inline-block;
+      border-radius: 10px;
+      transition: all 0.2s;
+      border: none;
+      font-weight: 600;
+      color: black;
+      background-color: white;
+      padding: 1em 1.5em;
+      cursor: pointer;
+      text-align: center;
+      user-select: none;
+    }
+
+    .button:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 15px rgba(249, 168, 37, 0.6);
+    }
+
+    .button:active {
+      transform: translateY(-1px);
+      box-shadow: none;
+    }
+
+    .footer-buttons {
+      margin-top: 2rem;
+      width: 100%;
+      max-width: 1000px;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .footer-buttons .button {
+      width: 120px;
+      background-color: #f9a825;
+      color: black;
+      font-weight: 700;
+    }
+
+    .footer-buttons .button:hover {
+      background-color: #f57f17;
+      color: white;
+      box-shadow: 0 8px 15px rgba(245, 127, 23, 0.7);
+    }
+
+    @media (max-width: 480px) {
+      .game-container {
+        grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+      }
+      .button {
+        font-size: 12px;
+        padding: 0.75em 1em;
+      }
     }
   </style>
-
-
-    <script>
-    document.addEventListener("DOMContentLoaded", function() {
-  // Get the select element
-  var select = document.getElementById("background-select");
-
-  // Set initial background image based on stored preference or default
-  var selectedBackground = localStorage.getItem("selectedBackground");
-  
-  if (selectedBackground) {
-    document.body.style.backgroundImage = "url(" + selectedBackground + ")";
-    select.value = selectedBackground;
-  }
-
-   // Listen for changes in the select element
-   select.addEventListener("change", function() {
-     var newBackground = this.value;
-     document.body.style.backgroundImage = "url(" + newBackground + ")";
-     localStorage.setItem("selectedBackground", newBackground);
-   });
-});
-
-  </script>
-
-
-
-
-<img src="R.png" alt="Image">
-</body>
-  <button class="button" onclick="window.location.href='start.html'">Back</button>
-    <button class="button" onclick="window.location.href='g@mes2.html'">Next Page</button>
-<body>
-  <div class="dust-particle"></div></body>
-<style>
-  #particles-js {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      z-index: -1;
-  }
-</style>
 </head>
 <body>
-<div id="particles-js"></div>
-<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-<script>
-  particlesJS('particles-js', {
-      "particles": {
-          "number": {
-              "value": 160,
-              "density": {
-                  "enable": true,
-                  "value_area": 800
-              }
-          },
-          "color": {
-              "value": "#ffffff"
-          },
-          "shape": {
-              "type": "circle",
-              "stroke": {
-                  "width": 0,
-                  "color": "#000000"
-              },
-              "polygon": {
-                  "nb_sides": 5
-              },
-              "image": {
-                  "src": "img/github.svg",
-                  "width": 60,
-                  "height": 60
-              }
-          },
-          "opacity": {
-              "value": 1,
-              "random": true,
-              "anim": {
-                  "enable": true,
-                  "speed": 1,
-                  "opacity_min": 0,
-                  "sync": false
-              }
-          },
-          "size": {
-              "value": 3,
-              "random": true,
-              "anim": {
-                  "enable": false,
-                  "speed": 4,
-                  "size_min": 0.3,
-                  "sync": false
-              }
-          },
-          "line_linked": {
-              "enable": false,
-              "distance": 150,
-              "color": "#ffffff",
-              "opacity": 0.4,
-              "width": 1
-          },
-          "move": {
-              "enable": true,
-              "speed": 1,
-              "direction": "none",
-              "random": true,
-              "straight": false,
-              "out_mode": "out",
-              "bounce": false,
-              "attract": {
-                  "enable": false,
-                  "rotateX": 600,
-                  "rotateY": 600
-              }
-          }
-      },
-      "interactivity": {
-          "detect_on": "canvas",
-          "events": {
-              "onhover": {
-                  "enable": true,
-                  "mode": "bubble"
-              },
-              "onclick": {
-                  "enable": true,
-                  "mode": "repulse"
-              },
-              "resize": true
-          },
-          "modes": {
-              "grab": {
-                  "distance": 400,
-                  "line_linked": {
-                      "opacity": 1
-                  }
-              },
-              "bubble": {
-                  "distance": 250,
-                  "size": 0,
-                  "duration": 2,
-                  "opacity": 0,
-                  "speed": 3
-              },
-              "repulse": {
-                  "distance": 400,
-                  "duration": 0.4
-              },
-              "push": {
-                  "particles_nb": 4
-              },
-              "remove": {
-                  "particles_nb": 2
-              }
-          }
-      },
-      "retina_detect": true
-  });
-</script>
-<script>
-  document.addEventListener("DOMContentLoaded", function() {
-    const favicon = document.querySelector("link[rel='icon']") || document.createElement("link");
-    favicon.rel = "icon";
-    document.head.appendChild(favicon);
+  <h1>All Games</h1>
 
-    const storedPreset = localStorage.getItem("selectedTabPreset") || "default";
-
-     switch (storedPreset) {
-      case "google":
-        document.title = "Google";
-        favicon.href = "https://www.google.com/R.png";
-        break;
-      case "classroom":
-        document.title = "Google Classroom";
-        favicon.href = "https://www.gstatic.com/classroom/logo_square_rounded.svg";
-        break;
-      case "vocabulary":
-        document.title = "Vocabulary.com";
-        favicon.href = "https://www.vocabulary.com/R.png";
-        break;
-      default:
-        document.title = "Games";
-        favicon.href = "R.png";
-    }
-  });
-</script>
+  <div class="game-container">
+    <button class="button" onclick="location.href='games/annoyingfishgame.html'">Annoying Fish Game</button>
+    <button class="button" onclick="location.href='games/arena.html'">Arena</button>
+    <button class="button" onclick="location.href='games/badtimesim.html'">Bad Time Sim</button>
+    <button class="button" onclick="location.href='games/bald.html'">Bald</button>
+    <button class="button" onclick="location.href='games/bankrobbery2.html'">Bank Robbery 2</button>
+    <button class="button" onclick="location.href='games/bitlife.html'">BitLife</button>
+    <button class="button" onclick="location.href='games/celeste.html'">Celeste</button>
+    <button class="button" onclick="location.href='games/clusterrush.html'">Cluster Rush</button>
+    <button class="button" onclick="location.href='games/cookie.html'">Cookie</button>
+    <button class="button" onclick="location.href='games/coolbeans.html'">Cool Beans</button>
+    <button class="button" onclick="location.href='games/crossyroad.html'">Crossy Road</button>
+    <button class="button" onclick="location.href='games/csgoclicker.html'">CSGO Clicker</button>
+    <button class="button" onclick="location.href='games/deadrails.html'">Dead Rails</button>
+    <button class="button" onclick="location.href='games/deathrun3d.html'">Deathrun 3D</button>
+    <button class="button" onclick="location.href='games/drift.html'">Drift</button>
+    <button class="button" onclick="location.href='games/edgesurf.html'">Edge Surf</button>
+    <button class="button" onclick="location.href='games/fancyp.html'">FancyP</button>
+    <button class="button" onclick="location.href='games/fifa2007.html'">FIFA 2007</button>
+    <button class="button" onclick="location.href='games/fnafshooter.html'">FNAF Shooter</button>
+    <button class="button" onclick="location.href='games/fruit.html'">Fruit Ninja</button>
+    <button class="button" onclick="location.href='games/funnyshooter.html'">Funny Shooter</button>
+    <button class="button" onclick="location.href='games/gachalife.html'">Gacha Life</button>
+    <button class="button" onclick="location.href='games/geodash.html'">Geo Dash</button>
+    <button class="button" onclick="location.href='games/geodashsubzero.html'">Geo Dash Subzero</button>
+    <button class="button" onclick="location.href='games/granny.html'">Granny</button>
+    <button class="button" onclick="location.href='games/granny2.html'">Granny 2</button>
+    <button class="button" onclick="location.href='games/hallow.html'">Hallow</button>
+    <button class="button" onclick="location.href='games/linerider.html'">Line Rider</button>
+    <button class="button" onclick="location.href='games/marioboom.html'">Mario Boom</button>
+    <button class="button" onclick="location.href='games/mariokart.html'">Mario Kart</button>
+    <button class="button" onclick="location.href='games/mc.html'">Minecraft (1.5.2)</button>
+    <button class="button" onclick="location.href='games/mc2.html'">Minecraft (Classic)</button>
+    <button class="button" onclick="location.href='games/metro.html'">Metroid Fusion</button>
+    <button class="button" onclick="location.href='games/miicreator.html'">Mii Creator</button>
+    <button class="button" onclick="location.href='games/mk48.html'">Mk48 NEW!!!</button>
+    <button class="button" onclick="location.href='games/moneytalkss.html'">Money Talks</button>
+    <button class="button" onclick="location.href='games/motorx3m.html'">Motor X3M</button>
+    <button class="button" onclick="location.href='games/mrmine.html'">MrM1ne</button>
+    <button class="button" onclick="location.href='games/onlyup.html'">OnlyUp</button>
+    <button class="button" onclick="location.href='games/ovo.html'">OVO</button>
+    <button class="button" onclick="location.href='games/peakgame.html'">Peak Game</button>
+    <button class="button" onclick="location.href='games/pokebound.html'">Pokebound</button>
+    <button class="button" onclick="location.href='games/pokefirered.html'">Poké Fire Red</button>
+    <button class="button" onclick="location.href='games/pokegreen.html'">Poké Green</button>
+    <button class="button" onclick="location.href='games/pokemerald.html'">Poké Emerald</button>
+    <button class="button" onclick="location.href='games/pokestadium.html'">Poké Stadium</button>
+    <button class="button" onclick="location.href='games/pressim.html'">Press IM</button>
+    <button class="button" onclick="location.href='games/retrobowl.html'">Retro Bowl</button>
+    <button class="button" onclick="location.href='games/riddle1.html'">Riddle 1</button>
+    <button class="button" onclick="location.href='games/riddle2.html'">Riddle 2</button>
+    <button class="button" onclick="location.href='games/roblox.html'">Roblox</button>
+    <button class="button" onclick="location.href='games/roof2.html'">Roof 2</button>
+    <button class="button" onclick="location.href='games/slime.html'">Slime</button>
+    <button class="button" onclick="location.href='games/slope.html'">Slope</button>
+    <button class="button" onclick="location.href='games/slope2.html'">Slope 2</button>
+    <button class="button" onclick="location.href='games/smb3.html'">Super Mario Bros 3</button>
+    <button class="button" onclick="location.href='games/smc.html'">SMC</button>
+    <button class="button" onclick="location.href='games/soccer.html'">Soccer</button>
+    <button class="button" onclick="location.href='games/subway.html'">Subway</button>
+    <button class="button" onclick="location.href='games/supersmash.html'">Super Smash</button>
+    <button class="button" onclick="location.href='games/taptap.html'">Tap Tap</button>
+    <button class="button" onclick="location.href='games/tiktok.html'">TikTok</button>
+    <button class="button" onclick="location.href='games/vex7.html'">Vex 7</button>
+    <button class="button" onclick="location.href='games/volley.html'">Volley</button>
+    <button class="button" onclick="location.href='games/world.html'">World</button>
+  </div>
 </body>
-
 </html>
