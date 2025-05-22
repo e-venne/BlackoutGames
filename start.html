@@ -1,144 +1,179 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5895657092030763"
-     crossorigin="anonymous"></script>
-    <meta name="google-adsense-account" content="ca-pub-5895657092030763">
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Spark</title>
-    <!-- Font Imports -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
-    <!-- Styles -->
-    <style>
-        /* General Page Styles */
-        body {
-            font-family: Ubuntu;
-            text-align: center;
-            color: rgb(255, 255, 255);
-            background-color: rgb(0, 0, 0);
-            margin: 0;
-            padding: 0;
-            background-repeat: no-repeat;
-            background-size: cover;
-            overflow: hidden;
-        }
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Spark</title>
 
-        h1 {
-            font-size: 80px;
-            margin-top: 50px;
-        }
+  <!-- Google AdSense -->
+  <meta name="google-adsense-account" content="ca-pub-5895657092030763" />
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5895657092030763" crossorigin="anonymous"></script>
 
-        /* Center Content */
-        .container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 30px;
-            margin-top: 50px;
-        }
+  <!-- Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet" />
 
-        /* Button Styles */
-        .button {
-            font-size: 14px;
-            text-transform: uppercase;
-            border-radius: 10px;
-            transition: 0.2s ease-in-out;
-            border: none;
-            font-family: Ubuntu;
-            font-weight: 425;
-            color: black;
-            background-color: white;
-            padding: 1em 2em;
-            margin: 10px;
-            cursor: pointer;
-        }
+  <style>
+    :root {
+      --accent: #f9a825; /* yellow-orange */
+      --accent-dark: #f57f17;
+      --text-color: #fff;
+    }
 
-        .button:hover {
-            transform: translateY(-3px);
-        }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-        /* Image Styles */
-        .image {
-            width: 75px;
-            height: 75px;
-            padding: 10px;
-            transition: 0.3s ease-in-out;
-        }
+    body {
+      font-family: 'Ubuntu', sans-serif;
+      background: url('background.gif') no-repeat center center fixed; /* Put your file path here */
+      background-size: cover;
+      color: var(--text-color);
+      min-height: 100vh;
+      overflow-x: hidden;
+      backdrop-filter: brightness(0.85);
+    }
 
-        .image:hover {
-            animation: shake 0.5s linear infinite;
-        }
+    header {
+      padding: 2rem 1rem 1rem;
+      text-align: center;
+    }
 
-        @keyframes shake {
-            0% { transform: translateX(0); }
-            25% { transform: translateX(-3px); }
-            50% { transform: translateX(3px); }
-            75% { transform: translateX(-3px); }
-        }
+    header h1 {
+      font-size: 3.5rem;
+      color: var(--accent);
+      text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+    }
 
-        /* Top Right Button Section */
-        .top-right {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-        }
-    </style>
+    .description {
+      max-width: 700px;
+      margin: 1rem auto;
+      padding: 1rem;
+      font-size: 1.1rem;
+      text-align: center;
+      background-color: rgba(0, 0, 0, 0.6);
+      border-radius: 12px;
+    }
+
+    .container {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+      padding: 2rem;
+    }
+
+    .card {
+      background: rgba(0, 0, 0, 0.65);
+      border: 2px solid var(--accent-dark);
+      border-radius: 12px;
+      padding: 1rem;
+      text-align: center;
+      transition: transform 0.2s ease;
+      width: 140px;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+    }
+
+    .card img {
+      width: 64px;
+      height: 64px;
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      margin: 0;
+      font-size: 1rem;
+      color: var(--accent);
+    }
+
+    .button {
+      background-color: var(--accent);
+      color: white;
+      border: none;
+      border-radius: 8px;
+      padding: 0.6rem 1.2rem;
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: background-color 0.2s ease;
+    }
+
+    .button:hover {
+      background-color: var(--accent-dark);
+    }
+
+    .top-right {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem 1rem;
+      font-size: 0.9rem;
+    }
+
+    footer a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 600px) {
+      .card {
+        width: 100%;
+        max-width: 250px;
+      }
+    }
+  </style>
 </head>
 <body>
 
+  <div class="top-right">
+    <a href="links.html"><button class="button">Alt Links</button></a>
+  </div>
+
+  <header>
     <h1>Spark</h1>
-    <p>Welcome to Spark! Is your favorite go to site for playing games during school hours</p>
-    <p>I made it so that some games look different on the outside, but rest assured, no games were swapped out.</p>
-    <p>Join our Discord for updates, suggest games via the form, and have fun!</p>
+  </header>
 
-    <!-- Icon Links -->
-    <div class="container">
-        <a href="g@mes.html"><img class="image" src="media/game.png" alt="G@mes"></a>
-        <a href="t00ls.html"><img class="image" src="media/tools.png" alt="T00ls"></a>
-        <a href="settings.html"><img class="image" src="media/theme.png" alt="S3tt!ngs"></a>
-        <a href="https://forms.gle/z7NSXDFTwegpjcUX9"><img class="image" src="media/suggestion.png" alt="Suggest"></a>
-    </div>
+  <div class="description">
+    <p>Welcome to Spark — your go-to site for playing games during school hours.</p>
+    <p>Some games may look different, but rest assured, nothing was swapped.</p>
+    <p>Join our Discord for updates, suggest games, and have fun!</p>
+  </div>
 
-    <!-- Discord Link -->
-    <p><a href="https://discord.gg/t8DYh2FFKJ" target="_blank" style="color: white; text-decoration: underline;">Join the Discord Server</a></p>
+  <div class="container">
+    <a class="card" href="g@mes.html">
+      <img src="media/game.png" alt="Games" />
+      <p>Games</p>
+    </a>
+    <a class="card" href="t00ls.html">
+      <img src="media/tools.png" alt="Tools" />
+      <p>Tools</p>
+    </a>
+    <a class="card" href="settings.html">
+      <img src="media/theme.png" alt="Settings" />
+      <p>Settings</p>
+    </a>
+    <a class="card" href="https://forms.gle/z7NSXDFTwegpjcUX9">
+      <img src="media/suggestion.png" alt="Suggest Game" />
+      <p>Suggest Game</p>
+    </a>
+  </div>
 
-    <!-- Top Right Buttons -->
-    <div class="top-right">
-        <a href="links.html"><button class="button">Spark Alt Links</button></a>
-    </div>
-
-    <!-- Dynamic Title & Favicon -->
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            const favicon = document.createElement("link");
-            favicon.rel = "icon";
-            document.head.appendChild(favicon);
-
-            const preset = localStorage.getItem("selectedTabPreset") || "default";
-
-            switch (preset) {
-                case "google":
-                    document.title = "Google";
-                    favicon.href = "https://www.google.com/favicon.ico";
-                    break;
-                case "classroom":
-                    document.title = "Google Classroom";
-                    favicon.href = "https://www.gstatic.com/classroom/logo_square_rounded.svg";
-                    break;
-                case "vocabulary":
-                    document.title = "Vocabulary.com";
-                    favicon.href = "https://www.vocabulary.com/favicon.ico";
-                    break;
-                default:
-                    document.title = "Spark";
-                    favicon.href = "R.png";
-            }
-        });
-    </script>
+  <footer>
+    <a href="https://discord.gg/t8DYh2FFKJ" target="_blank">Join the Discord Server</a>
+  </footer>
 
 </body>
 </html>
