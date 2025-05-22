@@ -14,7 +14,7 @@
 
   <style>
     :root {
-      --accent: #f9a825; /* yellow-orange */
+      --accent: #f9a825;
       --accent-dark: #f57f17;
       --text-color: #fff;
     }
@@ -25,25 +25,38 @@
       box-sizing: border-box;
     }
 
-    body {
+    html, body {
+      height: 100%;
       font-family: 'Ubuntu', sans-serif;
-      background: url('background.gif') no-repeat center center fixed; /* Put your file path here */
-      background-size: cover;
       color: var(--text-color);
-      min-height: 100vh;
       overflow-x: hidden;
-      backdrop-filter: brightness(0.85);
+    }
+
+    /* Video Background */
+    #background-video {
+      position: fixed;
+      right: 0;
+      bottom: 0;
+      min-width: 100%;
+      min-height: 100%;
+      width: auto;
+      height: auto;
+      z-index: -1;
+      object-fit: cover;
+      filter: brightness(0.85);
     }
 
     header {
       padding: 2rem 1rem 1rem;
       text-align: center;
+      position: relative;
+      z-index: 1;
     }
 
     header h1 {
       font-size: 3.5rem;
       color: var(--accent);
-      text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+      text-shadow: 2px 2px 8px rgba(0,0,0,0.5);
     }
 
     .description {
@@ -52,8 +65,10 @@
       padding: 1rem;
       font-size: 1.1rem;
       text-align: center;
-      background-color: rgba(0, 0, 0, 0.6);
+      background-color: rgba(0,0,0,0.6);
       border-radius: 12px;
+      position: relative;
+      z-index: 1;
     }
 
     .container {
@@ -62,33 +77,34 @@
       flex-wrap: wrap;
       gap: 20px;
       padding: 2rem;
+      position: relative;
+      z-index: 1;
     }
 
     .card {
-      background: rgba(0, 0, 0, 0.65);
+      background: rgba(0,0,0,0.65);
       border: 2px solid var(--accent-dark);
       border-radius: 12px;
       padding: 1rem;
       text-align: center;
       transition: transform 0.2s ease;
       width: 140px;
+      text-decoration: none;
+      color: var(--accent);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
 
     .card:hover {
       transform: translateY(-5px);
-      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.4);
     }
 
     .card img {
       width: 64px;
       height: 64px;
       margin-bottom: 10px;
-    }
-
-    .card p {
-      margin: 0;
-      font-size: 1rem;
-      color: var(--accent);
     }
 
     .button {
@@ -101,6 +117,8 @@
       text-transform: uppercase;
       cursor: pointer;
       transition: background-color 0.2s ease;
+      position: relative;
+      z-index: 1;
     }
 
     .button:hover {
@@ -111,12 +129,15 @@
       position: absolute;
       top: 20px;
       right: 20px;
+      z-index: 2;
     }
 
     footer {
       text-align: center;
       padding: 2rem 1rem;
       font-size: 0.9rem;
+      position: relative;
+      z-index: 1;
     }
 
     footer a {
@@ -137,6 +158,12 @@
   </style>
 </head>
 <body>
+
+  <!-- Video Background -->
+  <video id="background-video" autoplay muted loop playsinline>
+    <source src="background.mp4" type="video/mp4" />
+    Your browser does not support the video tag.
+  </video>
 
   <div class="top-right">
     <a href="links.html"><button class="button">Alt Links</button></a>
@@ -165,14 +192,14 @@
       <img src="media/theme.png" alt="Settings" />
       <p>Settings</p>
     </a>
-    <a class="card" href="https://forms.gle/z7NSXDFTwegpjcUX9">
+    <a class="card" href="https://forms.gle/z7NSXDFTwegpjcUX9" target="_blank" rel="noopener noreferrer">
       <img src="media/suggestion.png" alt="Suggest Game" />
       <p>Suggest Game</p>
     </a>
   </div>
 
   <footer>
-    <a href="https://discord.gg/t8DYh2FFKJ" target="_blank">Join the Discord Server</a>
+    <a href="https://discord.gg/t8DYh2FFKJ" target="_blank" rel="noopener noreferrer">Join the Discord Server</a>
   </footer>
 
 </body>
